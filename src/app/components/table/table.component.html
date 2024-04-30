@@ -1,0 +1,26 @@
+<table class="table table-striped">
+<thead>
+    <tr>
+        <th>Nombre</th>
+        <th>Fecha de Nacimiento</th>
+        <th>Tipo de documento</th>
+        <th>Número de documento</th>
+        <th>Celular</th>
+        <th>Email</th>
+        <th>Peso</th>
+    </tr>
+</thead>
+<tbody>
+    @for (persona of personas; track $index){
+    <tr>
+    <td>{{persona.nombre}}</td>
+    <td>{{persona.fechaNacimiento | date}}</td>
+    <td>{{persona.tipoDocumento}}</td>
+    <td>{{persona.numeroDocumento}}</td>
+    <td>{{persona.numeroCelular}}</td>
+    <td>{{persona.email}}</td>
+    <td>{{persona.peso}}</td>
+</tr>
+}
+</tbody>
+</table>

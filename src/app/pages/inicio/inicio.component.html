@@ -1,0 +1,49 @@
+<h1>Este es el componente nuevo (Inicio)</h1>
+
+<!-- <button (click)="cambioRuta()">Botón on Click (a persona)</button>
+<button (click)="rutaArticulo()">Articulo</button>
+<button routerLink="/persona">Mostrar 2</button>
+<button routerLink="/articulo">Artículo 2</button>
+<a routerLink="articulo">
+  <button>Articulo 3</button>
+</a>
+<a routerLink="/inicio">
+  <button>Inicio</button>
+</a>
+<a href="persona">
+  <button>Mostrar persona</button>
+</a> -->
+<button class="btn btn-primary" (click)="abrirModal()"><i class="fa-solid fa-plus"></i>Este es mi modal</button>
+
+@if (mostrarTitulo){
+<h2>Tabla de personas</h2>
+}
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Edad</th>
+      <th>Ciudad</th>
+      <th>Documentos</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (persona of personas; track $index){
+    <tr>
+      <td>
+        {{ persona.nombre }}
+      </td>
+      <td>
+        {{ persona.edad }}
+      </td>
+      <td>
+        {{ persona.ciudad }}
+      </td>
+      <td>
+        {{ persona.documento }}
+      </td>
+    </tr>
+    }
+  </tbody>
+</table>
